@@ -293,6 +293,30 @@
       .page{padding:20px 16px;}
       .topbar{padding:14px 16px;}
       .form-row,.form-row-3{grid-template-columns:1fr;}
+      
+      /* TABLA DE MOVIMIENTOS A FORMATO LISTA MÓVIL */
+      .transactions-table thead { display: none; }
+      .transactions-table, .transactions-table tbody, .transactions-table tr, .transactions-table td { display: block; width: 100%; }
+      .transactions-table tr { padding: 16px; position: relative; border-bottom: 1px solid rgba(42,53,80,0.5); }
+      .transactions-table td { padding: 0; border: none; display: block; }
+      .transactions-table tr:hover td { background: transparent; }
+      .transactions-table tr:hover { background: rgba(255,255,255,0.02); }
+      
+      .transactions-table td:nth-child(1) { width: 65%; } /* Descripción */
+      .transactions-table td:nth-child(5) { position: absolute; top: 16px; right: 16px; text-align: right; } /* Monto */
+      
+      .transactions-table td:nth-child(2),
+      .transactions-table td:nth-child(3),
+      .transactions-table td:nth-child(4) { 
+        display: inline-block; 
+        margin-top: 14px; 
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+      .transactions-table td:nth-child(3) { font-size: 12px !important; }
+      
+      .transactions-table td:nth-child(6) { display: none; } /* Ocultar nota larga en móvil */
+      .transactions-table td:nth-child(7) { position: absolute; bottom: 12px; right: 16px; } /* Botón eliminar */
     }
     @media(max-width:480px){.summary-grid{grid-template-columns:1fr;}}
 
