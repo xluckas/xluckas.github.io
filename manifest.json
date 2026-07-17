@@ -2,7 +2,7 @@
   "name": "FinFlow",
   "short_name": "FinFlow",
   "description": "Control Financiero Personal",
-  "start_url": "./index.html",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#0a0e1a",
   "theme_color": "#0a0e1a",
@@ -10,7 +10,8 @@
     {
       "src": "icon.svg",
       "sizes": "192x192 512x512",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ]
 }
