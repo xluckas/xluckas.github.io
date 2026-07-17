@@ -302,11 +302,18 @@
       .filter-select { flex: 1; min-width: 110px; }
       
       /* TABLA DE MOVIMIENTOS A FORMATO LISTA MÓVIL */
-      .transactions-card { border-radius: var(--radius-sm); }
+      .transactions-card { border-radius: var(--radius-sm); overflow: hidden; width: 100%; }
       .transactions-table thead { display: none; }
-      .transactions-table, .transactions-table tbody, .transactions-table tr, .transactions-table td { display: block; width: 100%; }
-      .transactions-table tr { padding: 16px 12px; position: relative; border-bottom: 1px solid rgba(42,53,80,0.5); }
-      .transactions-table td { padding: 0; border: none; display: block; }
+      .transactions-table, .transactions-table tbody { display: flex; flex-direction: column; width: 100%; }
+      .transactions-table tr { 
+        display: block; 
+        width: 100%; 
+        padding: 16px 16px 16px 12px; 
+        position: relative; 
+        border-bottom: 1px solid rgba(42,53,80,0.5); 
+        box-sizing: border-box; 
+      }
+      .transactions-table td { padding: 0; border: none; display: block; box-sizing: border-box; }
       .transactions-table tr:hover td { background: transparent; }
       .transactions-table tr:hover { background: rgba(255,255,255,0.02); }
       
