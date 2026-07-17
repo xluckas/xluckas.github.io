@@ -290,20 +290,29 @@
       .main-content{margin-left:0;padding-bottom:80px;} /* Espacio para el nav inferior */
       .mobile-nav{display:flex;}
       .summary-grid{grid-template-columns:1fr 1fr;}
-      .page{padding:20px 16px;}
-      .topbar{padding:14px 16px;}
+      .page{padding:16px 12px;}
+      .topbar{padding:14px 12px;}
       .form-row,.form-row-3{grid-template-columns:1fr;}
       
+      /* REPARAR DESBORDAMIENTO (OVERFLOW) EN MÓVILES */
+      .transactions-header { flex-direction: column; align-items: stretch; gap: 16px; }
+      .transactions-header .flex { flex-wrap: wrap; width: 100%; gap: 8px; }
+      .search-box { width: 100%; }
+      .search-box input { width: 100%; }
+      .filter-select { flex: 1; min-width: 110px; }
+      
       /* TABLA DE MOVIMIENTOS A FORMATO LISTA MÓVIL */
+      .transactions-card { border-radius: var(--radius-sm); }
       .transactions-table thead { display: none; }
       .transactions-table, .transactions-table tbody, .transactions-table tr, .transactions-table td { display: block; width: 100%; }
-      .transactions-table tr { padding: 16px; position: relative; border-bottom: 1px solid rgba(42,53,80,0.5); }
+      .transactions-table tr { padding: 16px 12px; position: relative; border-bottom: 1px solid rgba(42,53,80,0.5); }
       .transactions-table td { padding: 0; border: none; display: block; }
       .transactions-table tr:hover td { background: transparent; }
       .transactions-table tr:hover { background: rgba(255,255,255,0.02); }
       
-      .transactions-table td:nth-child(1) { width: 65%; } /* Descripción */
-      .transactions-table td:nth-child(5) { position: absolute; top: 16px; right: 16px; text-align: right; } /* Monto */
+      .tx-desc > div:nth-child(2) { word-break: break-word; padding-right: 8px; }
+      .transactions-table td:nth-child(1) { width: 68%; } /* Descripción */
+      .transactions-table td:nth-child(5) { position: absolute; top: 16px; right: 12px; text-align: right; max-width: 30%; word-break: break-word; } /* Monto */
       
       .transactions-table td:nth-child(2),
       .transactions-table td:nth-child(3),
@@ -316,7 +325,7 @@
       .transactions-table td:nth-child(3) { font-size: 12px !important; }
       
       .transactions-table td:nth-child(6) { display: none; } /* Ocultar nota larga en móvil */
-      .transactions-table td:nth-child(7) { position: absolute; bottom: 12px; right: 16px; } /* Botón eliminar */
+      .transactions-table td:nth-child(7) { position: absolute; bottom: 12px; right: 12px; } /* Botón eliminar */
     }
     @media(max-width:480px){.summary-grid{grid-template-columns:1fr;}}
 
